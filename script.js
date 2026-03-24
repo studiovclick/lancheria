@@ -25,7 +25,7 @@ hamburguer_tradicional:[
 {id:18,nome:"BURGUER DORITOS",preco:29.99,img:"imagens/burguerdoritos.png"},
 {id:19,nome:"BURGUER STROGONOFF",preco:28.99,img:"imagens/strogonoff.png"},
 {id:20,nome:"BURGUER BACON",preco:29.99,img:"imagens/hbacon.png"},
-{id:21,nome:"BURGUER KIDS",preco:19.99,img:"imagens/kids.jpg"}
+{id:21,nome:"BURGUER KIDS",preco:19.99,img:"imagens/kids.png"}
 ],
 
 xis:[
