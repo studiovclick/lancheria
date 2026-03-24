@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Pão de cima -->
+  <ellipse cx="50" cy="25" rx="35" ry="15" fill="#D2691E"/>
+  <!-- Alface -->
+  <ellipse cx="50" cy="40" rx="38" ry="8" fill="#228B22"/>
+  <!-- Carne -->
+  <ellipse cx="50" cy="50" rx="38" ry="12" fill="#8B4513"/>
+  <!-- Queijo -->
+  <ellipse cx="50" cy="62" rx="38" ry="8" fill="#FFD700"/>
+  <!-- Pão de baixo -->
+  <ellipse cx="50" cy="75" rx="35" ry="15" fill="#D2691E"/>
+  <!-- Brilho no pão -->
+  <ellipse cx="35" cy="20" rx="8" ry="5" fill="#F4A460" opacity="0.6"/>
+</svg>

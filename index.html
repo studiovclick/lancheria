@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lancheria da Pri</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="imagens/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+
+<header>
+    <button id="toggle-theme">🌙MODO ESCURO🌙</button>
+    <h1>🍔 Lancheria da Pri</h1>
+</header>
+
+<div class="container">
+<div id="menu"></div>
+</div>
+
+<div id="cart-bar" onclick="toggleCarrinho()">
+🛒 Ver Carrinho | <span id="total-bar">R$ 0.00</span>
+</div>
+
+<div id="modal">
+<div class="modal-body">
+
+<h2>Seu Pedido</h2>
+<div id="cart"></div>
+
+<h3>Dados para entrega</h3>
+
+<input id="cli-nome" class="obs" placeholder="Seu nome">
+<input id="cli-tel" class="obs" placeholder="Telefone">
+<input id="cli-rua" class="obs" placeholder="Rua">
+<input id="cli-numero" class="obs" placeholder="Número">
+
+<select id="bairro" class="obs" onchange="calcEntrega()">
+<option value="">Selecione seu bairro</option>
+<option data-tax="5">Centro</option>
+<option data-tax="6">Umbu</option>
+<option data-tax="7">Bela Vista</option>
+<option data-tax="8">Jardim Algarve</option>
+<option data-tax="10">Aparecida</option>
+<option data-tax="15">Outros</option>
+</select>
+
+<h3>Taxa: <span id="taxa">R$0.00</span></h3>
+<h3>Total: <span id="total">R$0.00</span></h3>
+
+<button class="btn-add" onclick="enviar()">Finalizar no WhatsApp</button>
+<button class="btn-add" onclick="toggleCarrinho()">Voltar</button>
+
+</div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

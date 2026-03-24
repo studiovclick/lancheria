@@ -1,0 +1,393 @@
+:root{
+--primaria:#8B4513;
+--secundaria:#FF8C00;
+--destaque:#D32F2F;
+--fundo:#fafafa;
+}
+
+body{
+font-family:Arial;
+font-size: 20px;
+background:var(--fundo);
+margin:0;
+padding-bottom:150px;
+transition:0.3s;
+}
+
+header{
+position:relative;
+background:var(--primaria);
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* BOTÃO TEMA */
+#toggle-theme{
+position:absolute;
+left:15px;
+top:15px;
+background:rgba(255,255,255,0.15);
+border:none;
+padding:10px 14px;
+border-radius:30px;
+color:white;
+font-size:16px;
+cursor:pointer;
+backdrop-filter:blur(6px);
+transition:0.3s;
+}
+
+#toggle-theme:hover{
+background:rgba(255,255,255,0.3);
+transform:scale(1.05);
+}
+
+/* DARK MODE */
+.dark{
+--primaria:#121212;
+--secundaria:#1f1f1f;
+--destaque:#ff9800;
+--fundo:#0d0d0d;
+background:#0d0d0d;
+color:#fff;
+}
+
+.dark #toggle-theme{
+background:rgba(230, 224, 224, 0.08);
+}
+
+.dark #toggle-theme:hover{
+background:rgba(255,255,255,0.2);
+}
+
+.container{
+max-width:700px;
+margin:auto;
+padding:15px;
+}
+
+.categoria{
+font-size:32px;
+margin:35px 0 15px;
+border-left:6px solid var(--destaque);
+padding-left:10px;
+}
+
+.dark .categoria{
+border-left:12px solid #ff9800;
+}
+
+/* CARDS */
+.item{
+background:white;
+border-radius:18px;
+overflow:hidden;
+margin-bottom:25px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
+.dark .item{
+background:#5a5555;
+color:#fff;
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 8px 20px rgba(0,0,0,0.7);
+}
+
+.img{
+height:300px;
+background-size:contain;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+.info{
+padding:35px;
+}
+
+.preco{
+color:var(--destaque);
+font-size:20px;
+font-weight:bold;
+margin:10px 0;
+}
+
+/* BOTÃO ADD */
+.btn-add{
+background:var(--secundaria);
+border:none;
+padding:15px;
+border-radius:30px;
+width:100%;
+margin-top:10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.dark .btn-add{
+background:linear-gradient(90deg,#ff9800,#ff5722);
+color:white;
+box-shadow:0 4px 10px rgba(0,0,0,0.5);
+}
+
+.obs{
+width:100%;
+margin-top:10px;
+padding:8px;
+border-radius:6px;
+border:1px solid #ccc;
+box-sizing:border-box;
+}
+
+#cart-bar{
+position:fixed;
+bottom:0;
+width:100%;
+background:linear-gradient(90deg,#FF8C00,#D32F2F);
+color:white;
+text-align:center;
+padding:16px;
+font-weight:bold;
+cursor:pointer;
+z-index:1000;
+}
+
+#modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+overflow:auto;
+z-index:1001;
+}
+
+.modal-body{
+background:white;
+max-width:500px;
+margin:30px auto;
+padding:25px;
+border-radius:18px;
+}
+
+.dark .modal-body{
+background:#1a1a1a;
+color:#fff;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.toast{
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+background:#333;
+color:white;
+padding:10px 20px;
+border-radius:8px;
+display:none;
+z-index:2000;
+}
+
+/* ESTILOS DO CARRINHO MELHORADOS */
+.cart-item {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid var(--destaque);
+  transition: all 0.2s;
+}
+
+.dark .cart-item {
+  background: #2a2a2a;
+  border-left-color: #ff9800;
+}
+
+.cart-item b:first-child {
+  font-size: 1.1em;
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--primaria);
+}
+
+.dark .cart-item b:first-child {
+  color: #ff9800;
+}
+
+.cart-item br {
+  margin-bottom: 5px;
+}
+
+.cart-item b:last-of-type {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 1.1em;
+  color: var(--destaque);
+}
+
+.btn-remover {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-weight: bold;
+  transition: all 0.2s;
+  margin-top: 12px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.btn-remover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.4);
+  background: linear-gradient(135deg, #c82333, #bd2130);
+}
+
+/* Espaçamento entre informações do carrinho */
+.cart-item {
+  line-height: 1.5;
+}
+
+.cart-item b:first-child {
+  margin-bottom: 12px;
+  font-size: 1.15em;
+}
+
+.cart-item b:last-of-type {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+/* Container do carrinho com scroll */
+#cart {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding-right: 5px;
+}
+
+/* Scrollbar estilizada */
+#cart::-webkit-scrollbar {
+  width: 6px;
+}
+
+#cart::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.dark #cart::-webkit-scrollbar-track {
+  background: #333;
+}
+
+#cart::-webkit-scrollbar-thumb {
+  background: var(--destaque);
+  border-radius: 10px;
+}
+
+/* Resumo do pedido */
+.cart-summary {
+  background: #f0f0f0;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.dark .cart-summary {
+  background: #2a2a2a;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 1em;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-top: 2px solid var(--destaque);
+  margin-top: 8px;
+  color: var(--destaque);
+}
+
+.modal-body h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primaria);
+}
+
+.dark .modal-body h2 {
+  color: #ff9800;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .btn-remover {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+.extras-box {
+  margin: 10px 0;
+  padding: 8px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.extras-titulo {
+  font-size: 0.85em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.extras-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.extra-item {
+  margin: 5px 0;
+  padding: 3px 0;
+}
+
+.extra-item label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.extra-item input[type="checkbox"] {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+/* Tema escuro */
+.dark .extras-box {
+  background: #2a2a2a;
+}
+
+.dark .extras-titulo {
+  color: #aaa;
+}
+
+.dark .extra-item {
+  color: #ddd;
+}
